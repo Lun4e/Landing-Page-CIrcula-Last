@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circula : AI-Powered Smart Waste Intelligence Application for Sustainable Industry through IoT Ecosystem Integration</title>
+  <meta name="description"
+    content="Circula is an internal factory IoT environmental monitoring system installed directly on wastewater discharge pipes. We help industries increase waste treatment efficiency, comply with KLHK environmental standards, and transform into Circular Economy 5.0." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Mobile tap highlight defaults */
+    .btn-primary,
+    .btn-secondary,
+    .sim-step-item,
+    .phone-nav-item,
+    .waste-btn,
+    .demo-btn,
+    .back-to-top,
+    .lang-btn,
+    .mobile-lang-btn,
+    .login-btn-submit,
+    .login-google-btn {
+      -webkit-tap-highlight-color: rgba(76, 167, 91, 0.15);
+      touch-action: manipulation;
+      cursor: pointer;
+    }
+
+    /* Prevent blocking pointer-events for decorations */
+    .hero-bg-orb,
+    .hero-grid,
+    .phone-glow,
+    .features::before,
+    .about-image-card::before {
+      pointer-events: none !important;
+    }
+
+    /* Mobile nav overlay controls */
+    .mobile-nav-overlay {
+      pointer-events: none !important;
+    }
+
+    .mobile-nav-overlay.active {
+      pointer-events: auto !important;
+    }
+  </style>
+  <link rel="icon" type="image/jpeg" href="assets/logo.png" />
+</head>
+
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <img class="logo-icon" src="assets/logo.png" alt="Circula Logo" />
+        <span class="logo-text">Circula</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-lang-en="About" data-lang-id="Tentang">About</a>
+        <a href="#features" data-lang-en="Features" data-lang-id="Fitur">Features</a>
+        <a href="#simulator" data-lang-en="Simulator" data-lang-id="Simulator">Simulator</a>
+        <a href="#impact" data-lang-en="Impact" data-lang-id="Dampak">Impact</a>
+        <a href="#contact" data-lang-en="Contact" data-lang-id="Kontak">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn" data-lang="id" onclick="setLanguage('id')">ID</button>
+        </div>
+        <a href="#contact" class="nav-cta" data-lang-en="Request Demo" data-lang-id="Ajukan Demo">Request Demo</a>
+      </div>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about" data-lang-en="About" data-lang-id="Tentang">About</a>
+    <a href="#features" data-lang-en="Features" data-lang-id="Fitur">Features</a>
+    <a href="#simulator" data-lang-en="Simulator" data-lang-id="Simulator">Simulator</a>
+    <a href="#impact" data-lang-en="Impact" data-lang-id="Dampak">Impact</a>
+    <a href="#contact" data-lang-en="Contact" data-lang-id="Kontak">Contact</a>
+    <div class="mobile-lang-toggle">
+      <button class="mobile-lang-btn active" data-lang="en" onclick="setLanguage('en')">English</button>
+      <button class="mobile-lang-btn" data-lang="id" onclick="setLanguage('id')">Indonesia</button>
+    </div>
+    <a href="#contact" class="mobile-cta-btn" data-lang-en="Request Demo" data-lang-id="Ajukan Demo">Request Demo</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-orb"></div>
+    <div class="hero-bg-orb"></div>
+    <div class="hero-bg-orb"></div>
+    <div class="hero-grid"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse"></span>
+          <span data-lang-en="Internal Factory Wastewater Intelligence"
+            data-lang-id="Kecerdasan Air Limbah Internal Pabrik">Internal Factory Wastewater Intelligence</span>
+        </div>
+
+        <h1 class="hero-title" data-lang-en="Circula : AI-Powered <span>Smart Waste Intelligence</span> Application for Sustainable Industry through IoT Ecosystem Integration"
+          data-lang-id="Circula : Aplikasi <span>Kecerdasan Limbah Pintar</span> Berbasis AI untuk Industri Berkelanjutan melalui Integrasi Ekosistem IoT">Circula : AI-Powered <span>Smart Waste Intelligence</span> Application for Sustainable Industry through IoT Ecosystem Integration</h1>
+        
+        <p class="hero-tagline" data-lang-en="Securing Drainage Pipes, Rivers, and Regulatory Compliance"
+          data-lang-id="Mengamankan Saluran Pembuangan, Sungai, & Kepatuhan Regulasi">Securing Drainage Pipes, Rivers, and Regulatory Compliance</p>
+        
+        <p class="hero-description"
+          data-lang-en="An internal factory platform integrated directly with IoT probes inside your discharge pipelines. Monitor pH, temperature, turbidity, and chemical oxygen demand in real-time. Prevent river pollution, meet environmental compliance limits (KLHK/BML), and drive transformation towards Circular Economy 5.0."
+          data-lang-id="Platform internal pabrik yang terintegrasi langsung dengan sensor IoT di dalam saluran pembuangan produksi. Pantau pH, temperatur, kekeruhan, dan COD secara real-time. Cegah pencemaran sungai, penuhi baku mutu lingkungan (KLHK/BML), dan dorong transformasi menuju ekosistem Circular Economy 5.0.">
+          An internal factory platform integrated directly with IoT probes inside your discharge pipelines. Monitor pH, temperature, turbidity, and chemical oxygen demand in real-time. Prevent river pollution, meet environmental compliance limits (KLHK/BML), and drive transformation towards Circular Economy 5.0.</p>
+
+        <div class="hero-actions">
+          <a href="#simulator" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            <span data-lang-en="Try App Simulator" data-lang-id="Coba Simulator Aplikasi">Try App Simulator</span>
+          </a>
+          <a href="#features" class="btn-secondary">
+            <span data-lang-en="Explore Features" data-lang-id="Jelajahi Fitur">Explore Features</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" width="20" height="20">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="stat-number">IoT</div>
+            <div class="stat-label" data-lang-en="Pipe Sensors" data-lang-id="Sensor Saluran Pembuangan">Pipe Sensors</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label" data-lang-en="River Protection" data-lang-id="Perlindungan Sungai">River Protection</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-number">5.0</div>
+            <div class="stat-label" data-lang-en="Circular Economy" data-lang-id="Ekonomi Sirkular 5.0">Circular Economy 5.0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone-glow"></div>
+        <div class="phone-mockup-frame">
+          <!-- Main smartphone mockup showing Dashboard Screen -->
+          <svg viewBox="0 0 220 440" style="background:#E3F2FD; border-radius: 28px; width:100%; font-family:sans-serif;">
+            <!-- Header bar -->
+            <rect x="0" y="0" width="220" height="40" fill="#4CA75B" />
+            <text x="110" y="25" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Dashboard</text>
+            
+            <!-- score card -->
+            <rect x="12" y="52" width="196" height="60" rx="8" fill="#4CA75B" />
+            <text x="24" y="72" fill="#e8f5e9" font-size="7">Sustainable Score</text>
+            <text x="24" y="96" fill="#fff" font-size="20" font-weight="900">87<tspan font-size="10">/100</tspan></text>
+            <rect x="145" y="68" width="50" height="15" rx="7" fill="rgba(255,255,255,0.22)" />
+            <text x="170" y="78" fill="#fff" font-size="6" font-weight="bold" text-anchor="middle">Excellent</text>
+            
+            <!-- Realtime section -->
+            <text x="12" y="132" fill="#1e293b" font-size="7" font-weight="bold">Real Time Monitoring</text>
+            
+            <!-- grid 1 -->
+            <rect x="12" y="142" width="92" height="42" rx="6" fill="#fff" />
+            <text x="20" y="154" fill="#64748B" font-size="5.5" font-weight="bold">💧 pH Waste</text>
+            <text x="20" y="168" fill="#0F172A" font-size="10" font-weight="bold">7.1</text>
+            <rect x="20" y="172" width="26" height="8" rx="4" fill="#E8F5E9" />
+            <text x="33" y="178" fill="#2E7D32" font-size="4.5" font-weight="bold" text-anchor="middle">Normal</text>
+            
+            <!-- grid 2 -->
+            <rect x="116" y="142" width="92" height="42" rx="6" fill="#fff" />
+            <text x="124" y="154" fill="#64748B" font-size="5.5" font-weight="bold">🌡 Temperatur</text>
+            <text x="124" y="168" fill="#0F172A" font-size="10" font-weight="bold">29°C</text>
+            <rect x="124" y="172" width="26" height="8" rx="4" fill="#E8F5E9" />
+            <text x="137" y="178" fill="#2E7D32" font-size="4.5" font-weight="bold" text-anchor="middle">Normal</text>
+
+            <!-- grid 3 -->
+            <rect x="12" y="190" width="92" height="42" rx="6" fill="#fff" />
+            <text x="20" y="202" fill="#64748B" font-size="5.5" font-weight="bold">🌊 Turbidity</text>
+            <text x="20" y="216" fill="#0F172A" font-size="10" font-weight="bold">18 NTU</text>
+            <rect x="20" y="220" width="26" height="8" rx="4" fill="#E8F5E9" />
+            <text x="33" y="226" fill="#2E7D32" font-size="4.5" font-weight="bold" text-anchor="middle">Normal</text>
+
+            <!-- grid 4 -->
+            <rect x="116" y="190" width="92" height="42" rx="6" fill="#fff" />
+            <text x="124" y="202" fill="#64748B" font-size="5.5" font-weight="bold">🧪 COD</text>
+            <text x="124" y="216" fill="#0F172A" font-size="10" font-weight="bold">42 mg/L</text>
+            <rect x="124" y="220" width="26" height="8" rx="4" fill="#E8F5E9" />
+            <text x="137" y="226" fill="#2E7D32" font-size="4.5" font-weight="bold" text-anchor="middle">Normal</text>
+            
+            <!-- Chart area -->
+            <text x="12" y="248" fill="#1e293b" font-size="7" font-weight="bold">Monitoring Trend</text>
+            <rect x="12" y="254" width="196" height="95" rx="8" fill="#fff" />
+            <!-- Line graph helper -->
+            <path d="M22,320 L52,285 L90,298 L128,274 L166,288 L198,265" stroke="#4CA75B" stroke-width="1.5" fill="none"/>
+            <path d="M22,305 L52,312 L90,270 L128,290 L166,275 L198,285" stroke="#F59E0B" stroke-width="1.5" fill="none"/>
+            <text x="30" y="340" fill="#94A3B8" font-size="4.5">10:00</text>
+            <text x="70" y="340" fill="#94A3B8" font-size="4.5">14:00</text>
+            <text x="110" y="340" fill="#94A3B8" font-size="4.5">18:00</text>
+            <text x="150" y="340" fill="#94A3B8" font-size="4.5">22:00</text>
+            
+            <!-- Bottom navigation mock -->
+            <rect x="0" y="398" width="220" height="42" fill="#fff" />
+            <circle cx="28" cy="415" r="8" fill="rgba(76,167,91,0.12)" />
+            <circle cx="28" cy="415" r="3" fill="#4CA75B" />
+            <circle cx="70" cy="415" r="3" fill="#94A3B8" />
+            <circle cx="110" cy="415" r="3" fill="#94A3B8" />
+            <circle cx="150" cy="415" r="3" fill="#94A3B8" />
+            <circle cx="192" cy="415" r="3" fill="#94A3B8" />
+          </svg>
+        </div>
+        
+        <!-- Floating Alert Card 1 -->
+        <div class="float-card-1">
+          <div class="alert-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span data-lang-en="AI Risk Warning" data-lang-id="Risiko Terdeteksi AI">AI Risk Warning</span>
+          </div>
+          <p class="alert-desc" data-lang-en="AI detects high risk of pollution in drainage pipe. pH threshold warning."
+            data-lang-id="AI mendeteksi risiko pencemaran tinggi pada saluran pembuangan. Peringatan ambang pH.">AI detects high risk of pollution in drainage pipe. pH threshold warning.</p>
+        </div>
+
+        <!-- Floating Alert Card 2 -->
+        <div class="float-card-2">
+          <div class="rec-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="23 4 12 15 6 9 1 14"/>
+              <polyline points="17 4 23 4 23 10"/>
+            </svg>
+            <span data-lang-en="Circular Economy 5.0" data-lang-id="Ekonomi Sirkular 5.0">Circular Economy 5.0</span>
+          </div>
+          <p class="rec-desc" data-lang-en="Recycle 25% of wastewater output for production reuse. Est. savings: Rp 12M/mo."
+            data-lang-id="Daur ulang 25% limbah air untuk produksi. Estimasi penghematan: Rp 12jt/bln.">Recycle 25% of wastewater output for production reuse. Est. savings: Rp 12M/mo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STANDARDS ==================== -->
+  <section class="sponsors" id="sponsors">
+    <div class="container">
+      <div class="sponsors-inner reveal">
+        <p class="sponsors-label" data-lang-en="Integrating with Factory ESG Compliance & KLHK Baku Mutu Lingkungan Standards"
+          data-lang-id="Mendukung Kepatuhan ESG Pabrik & Standar Baku Mutu Lingkungan KLHK">Integrating with Factory ESG Compliance & KLHK Baku Mutu Lingkungan Standards</p>
+        <div class="sponsors-logos">
+          <!-- KLHK -->
+          <div class="sponsor-item">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="140" height="36" rx="6" fill="#F1F5F9" />
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#2E7D32" font-family="'Inter', sans-serif" font-weight="900" font-size="12">KLHK INDONESIA</text>
+            </svg>
+          </div>
+          <!-- ISO 14001 -->
+          <div class="sponsor-item">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="140" height="36" rx="6" fill="#F1F5F9" />
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#64748B" font-family="'Inter', sans-serif" font-weight="900" font-size="12">ISO 14001:2015</text>
+            </svg>
+          </div>
+          <!-- POJK 51 -->
+          <div class="sponsor-item">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="140" height="36" rx="6" fill="#F1F5F9" />
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#64748B" font-family="'Inter', sans-serif" font-weight="900" font-size="12">POJK 51 COMPLIANCE</text>
+            </svg>
+          </div>
+          <!-- Industry 5.0 -->
+          <div class="sponsor-item">
+            <svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="140" height="36" rx="6" fill="#F1F5F9" />
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#2E7D32" font-family="'Inter', sans-serif" font-weight="900" font-size="11">CIRCULAR INDUSTRY 5.0</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal-left">
+          <div class="about-image-card">
+            <div class="about-phone-visual">
+              <svg viewBox="0 0 220 440" style="background:#E3F2FD; border-radius: 30px; width:100%; font-family:sans-serif;">
+                <rect x="0" y="0" width="220" height="40" fill="#4CA75B" />
+                <text x="110" y="25" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">ESG Reporting</text>
+                <!-- Environmental Score box -->
+                <rect x="12" y="52" width="92" height="60" rx="8" fill="#fff" />
+                <text x="20" y="68" fill="#64748B" font-size="5" font-weight="bold">Environmental Score</text>
+                <text x="20" y="92" fill="#4CA75B" font-size="20" font-weight="900">89</text>
+                <text x="20" y="102" fill="#94A3B8" font-size="5">Target Achieved 7.1</text>
+                <!-- ESG Compliance box -->
+                <rect x="116" y="52" width="92" height="60" rx="8" fill="#fff" />
+                <text x="124" y="68" fill="#64748B" font-size="5" font-weight="bold">ESG Compliance</text>
+                <text x="124" y="92" fill="#4CA75B" font-size="20" font-weight="900">92%</text>
+                <text x="124" y="102" fill="#94A3B8" font-size="5">Target 95%</text>
+                <!-- Carbon reduction box -->
+                <rect x="12" y="122" width="92" height="60" rx="8" fill="#fff" />
+                <text x="20" y="138" fill="#64748B" font-size="5" font-weight="bold">Carbon Reduction</text>
+                <text x="20" y="162" fill="#4CA75B" font-size="20" font-weight="900">12%</text>
+                <text x="20" y="172" fill="#94A3B8" font-size="5">VS bulan lalu</text>
+                <!-- Sustainability box -->
+                <rect x="116" y="122" width="92" height="60" rx="8" fill="#fff" />
+                <text x="124" y="138" fill="#64748B" font-size="5" font-weight="bold">Sustainability Score</text>
+                <text x="124" y="162" fill="#4CA75B" font-size="20" font-weight="900">87</text>
+                <text x="124" y="172" fill="#94A3B8" font-size="5">/ 100</text>
+                
+                <!-- Sustainability Analytics Section -->
+                <text x="12" y="200" fill="#1E293B" font-size="7.5" font-weight="bold">Sustainability Analytics</text>
+                
+                <rect x="12" y="210" width="196" height="110" rx="8" fill="#fff" />
+                
+                <!-- Bar 1: Air Bersih -->
+                <text x="20" y="226" fill="#64748B" font-size="5.5" font-weight="bold">Air Bersih (Clean Water Ratio)</text>
+                <text x="200" y="226" fill="#0F172A" font-size="5.5" font-weight="bold" text-anchor="end">90%</text>
+                <rect x="20" y="232" width="180" height="6" rx="3" fill="#F1F5F9" />
+                <rect x="20" y="232" width="162" height="6" rx="3" fill="#0284C7" />
+                
+                <!-- Bar 2: CO2 Emission Offset -->
+                <text x="20" y="256" fill="#64748B" font-size="5.5" font-weight="bold">CO2 Emission Offset</text>
+                <text x="200" y="256" fill="#0F172A" font-size="5.5" font-weight="bold" text-anchor="end">42%</text>
+                <rect x="20" y="262" width="180" height="6" rx="3" fill="#F1F5F9" />
+                <rect x="20" y="262" width="75.6" height="6" rx="3" fill="#EA580C" />
+                
+                <!-- Bar 3: Pengurangan Limbah -->
+                <text x="20" y="286" fill="#64748B" font-size="5.5" font-weight="bold">Pengurangan Limbah (Waste Reduction)</text>
+                <text x="200" y="286" fill="#0F172A" font-size="5.5" font-weight="bold" text-anchor="end">81%</text>
+                <rect x="20" y="292" width="180" height="6" rx="3" fill="#F1F5F9" />
+                <rect x="20" y="292" width="145.8" height="6" rx="3" fill="#4CA75B" />
+                
+                <!-- Download button -->
+                <rect x="12" y="336" width="196" height="30" rx="8" fill="#4CA75B" />
+                <text x="110" y="354" fill="#fff" font-size="8" font-weight="bold" text-anchor="middle">Unduh Laporan ESG (Download ESG)</text>
+                
+                <!-- Phone Bottom Navigation Bar -->
+                <rect x="0" y="398" width="220" height="42" fill="#fff" />
+                <line x1="0" y1="398" x2="220" y2="398" stroke="#E2E8F0" stroke-width="0.5" />
+                <!-- Icon 1: Dashboard -->
+                <circle cx="28" cy="415" r="3" fill="#94A3B8" />
+                <!-- Icon 2: Risk -->
+                <circle cx="70" cy="415" r="3" fill="#94A3B8" />
+                <!-- Icon 3: Report (Active indicator) -->
+                <circle cx="110" cy="415" r="8" fill="rgba(76,167,91,0.12)" />
+                <circle cx="110" cy="415" r="3" fill="#4CA75B" />
+                <!-- Icon 4: Insight -->
+                <circle cx="150" cy="415" r="3" fill="#94A3B8" />
+                <!-- Icon 5: Profile -->
+                <circle cx="192" cy="415" r="3" fill="#94A3B8" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span data-lang-en="About Circula" data-lang-id="Tentang Circula">About Circula</span>
+          </div>
+          <h2 data-lang-en="Smart Wastewater IoT for <span>Sustainable Factories</span>"
+            data-lang-id="IoT Air Limbah Pintar untuk <span>Pabrik Berkelanjutan</span>">Smart Wastewater IoT for <span>Sustainable Factories</span></h2>
+          <p data-lang-en="Circula is an internal factory system. We install IoT probes directly into wastewater discharge pipes to measure parameters like pH, temperature, turbidity, and chemical oxygen demand (COD) in real-time. By monitoring the exact condition of production waste before it reaches public waterways (such as rivers), we help factories increase waste processing efficiency, meet regulatory compliance, and drive circular water loops."
+            data-lang-id="Circula adalah sistem internal pabrik. Kami memasang sensor IoT langsung ke saluran pembuangan air limbah untuk mengukur parameter seperti pH, suhu, kekeruhan, dan COD secara real-time. Dengan memantau kondisi limbah sisa produksi sebelum dialirkan ke lingkungan (seperti sungai), kami membantu pabrik meningkatkan efisiensi pengolahan limbah, memenuhi kepatuhan regulasi, dan mewujudkan siklus daur ulang air.">
+            Circula is an internal factory system. We install IoT probes directly into wastewater discharge pipes to measure parameters like pH, temperature, turbidity, and chemical oxygen demand (COD) in real-time. By monitoring the exact condition of production waste before it reaches public waterways (such as rivers), we help factories increase waste processing efficiency, meet regulatory compliance, and drive circular water loops.</p>
+
+          <div class="about-highlights stagger-children">
+            <div class="about-highlight-item">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <span data-lang-en="River Protection Guard" data-lang-id="Proteksi Pencemaran Sungai">River Protection Guard</span>
+            </div>
+            <div class="about-highlight-item">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
+              <span data-lang-en="IoT Drainage Probes" data-lang-id="Sensor IoT Saluran Pembuangan">Sensor IoT Saluran Pembuangan</span>
+            </div>
+            <div class="about-highlight-item">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+              </div>
+              <span data-lang-en="Regulatory Alert limits" data-lang-id="Batas Baku Mutu Regulasi">Batas Baku Mutu Regulasi</span>
+            </div>
+            <div class="about-highlight-item">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+                </svg>
+              </div>
+              <span data-lang-en="Circular Economy 5.0" data-lang-id="Ekonomi Sirkular 5.0">Ekonomi Sirkular 5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES ==================== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <span class="badge-dot"></span>
+          <span data-lang-en="Ecosystem Modules" data-lang-id="Modul Ekosistem">Modul Ekosistem</span>
+        </div>
+        <h2 class="section-title" data-lang-en="Smart Wastewater <span>Intelligence Solutions</span>"
+          data-lang-id="Solusi Kecerdasan <span>Pengolahan Air Limbah</span>">Smart Wastewater <span>Intelligence Solutions</span></h2>
+        <p class="section-subtitle"
+          data-lang-en="Circula provides the internal industrial toolset to manage wastewater compliance, prevent pollution, and reuse resources."
+          data-lang-id="Circula menyediakan alat internal industri untuk mengelola kepatuhan air limbah, mencegah pencemaran lingkungan, dan menggunakan kembali air produksi.">
+          Circula provides the internal industrial toolset to manage wastewater compliance, prevent pollution, and reuse resources.</p>
+      </div>
+
+      <div class="features-grid stagger-children">
+        <!-- Feature 1: Monitoring -->
+        <div class="feature-card">
+          <div class="feature-icon monitoring-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </div>
+          <h3 data-lang-en="Discharge Pipe IoT Probes" data-lang-id="Sensor IoT Saluran Pembuangan">Sensor IoT Saluran Pembuangan</h3>
+          <p data-lang-en="Measure wastewater pH, temperature, turbidity, and chemical oxygen demand directly inside the discharge line using automated digital sensors."
+            data-lang-id="Ukur pH air limbah, temperatur, kekeruhan, dan COD langsung di dalam saluran saluran pembuangan menggunakan sensor digital otomatis.">
+            Measure wastewater pH, temperature, turbidity, and chemical oxygen demand directly inside the discharge line using automated digital sensors.</p>
+          <span class="feature-tag" data-lang-en="📡 Real-time Pipeline Logs" data-lang-id="📡 Log Aliran Saluran Real-time">📡 Real-time Pipeline Logs</span>
+        </div>
+
+        <!-- Feature 2: AI Risk -->
+        <div class="feature-card">
+          <div class="feature-icon risk-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+              <line x1="12" y1="9" x2="12" y2="13" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+          </div>
+          <h3 data-lang-en="AI Pollution Risk Prevention" data-lang-id="Pencegahan Risiko Pencemaran AI">Pencegahan Risiko Pencemaran AI</h3>
+          <p data-lang-en="Automatically identify chemical leaks, abnormal pH trends, or organic load spikes before waste flows into public rivers. Prevent high regulatory fines."
+            data-lang-id="Identifikasi kebocoran zat kimia secara otomatis, tren pH tidak normal, atau lonjakan COD sebelum mengalir ke sungai publik. Cegah denda kepatuhan yang tinggi.">
+            Automatically identify chemical leaks, abnormal pH trends, or organic load spikes before waste flows into public rivers. Prevent high regulatory fines.</p>
+          <span class="feature-tag" data-lang-en="🧠 Predictive Risk Analysis" data-lang-id="🧠 Analisis Risiko Prediktif">🧠 Predictive Risk Analysis</span>
+        </div>
+
+        <!-- Feature 3: ESG Report -->
+        <div class="feature-card">
+          <div class="feature-icon esg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+          </div>
+          <h3 data-lang-en="KLHK & POJK Compliance Reports" data-lang-id="Laporan Kepatuhan KLHK & POJK">Laporan Kepatuhan KLHK & POJK</h3>
+          <p data-lang-en="Verify clean water reuse parameters, carbon reductions, and waste processing scores. Compile ESG reports that align with POJK 51 standards instantly."
+            data-lang-id="Verifikasi metrik penggunaan kembali air bersih, reduksi emisi CO2, dan skor kepatuhan. Susun laporan ESG yang selaras dengan POJK 51 secara instan.">
+            Verify clean water reuse parameters, carbon reductions, and waste processing scores. Compile ESG reports that align with POJK 51 standards instantly.</p>
+          <span class="feature-tag" data-lang-en="📋 ESG Compliance score" data-lang-id="📋 Skor Kepatuhan ESG">📋 ESG Compliance score</span>
+        </div>
+
+        <!-- Feature 4: Circular Economy -->
+        <div class="feature-card">
+          <div class="feature-icon circular-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+            </svg>
+          </div>
+          <h3 data-lang-en="Circular Economy 5.0 Loops" data-lang-id="Ekonomi Sirkular 5.0">Ekonomi Sirkular 5.0</h3>
+          <p data-lang-en="Identify recycling matching paths. AI matches wastewater filter output back into internal boiler or factory production processes, optimizing water loops."
+            data-lang-id="Identifikasi jalur pencocokan daur ulang. AI mencocokkan sisa pembuangan kembali ke utilitas internal pabrik (boiler/produksi), mengoptimalkan siklus air.">
+            Identify recycling matching paths. AI matches wastewater filter output back into internal boiler or factory production processes, optimizing water loops.</p>
+          <span class="feature-tag" data-lang-en="♻ Internal Loop Matching" data-lang-id="♻ Pencocokan Loop Internal">♻ Internal Loop Matching</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SIMULATOR SECTION ==================== -->
+  <section class="simulator-section" id="simulator">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <span class="badge-dot"></span>
+          <span data-lang-en="Interactive Experience" data-lang-id="Pengalaman Interaktif">Interactive Experience</span>
+        </div>
+        <h2 class="section-title" data-lang-en="Explore <span>Circula Mobile App</span>"
+          data-lang-id="Jelajahi <span>Aplikasi Mobile Circula</span>">Explore <span>Circula Mobile App</span></h2>
+        <p class="section-subtitle"
+          data-lang-en="Interact with the high-fidelity screens of the Circula smartphone prototype. Try logging in, viewing water sensors, checking AI warnings, and inspecting ESG metrics."
+          data-lang-id="Berinteraksilah dengan layar prototipe resolusi tinggi dari aplikasi smartphone Circula. Coba alur login, lihat sensor air, periksa peringatan AI, dan pantau metrik ESG.">
+          Interact with the high-fidelity screens of the Circula smartphone prototype. Try logging in, viewing water sensors, checking AI warnings, and inspecting ESG metrics.</p>
+      </div>
+
+      <!-- Simulator B2B mobile grid layout -->
+      <div class="sim-grid-layout">
+        <!-- Selector panel: Checklist of screens (synchronized with bottom navbar) -->
+        <div class="sim-info-side reveal-left">
+          <h3 data-lang-en="Interactive Screens Guide" data-lang-id="Panduan Layar Interaktif">Interactive Screens Guide</h3>
+          <p data-lang-en="Click each prototype screen on the guide or use the smartphone bottom navigation bar to interact directly."
+            data-lang-id="Klik setiap layar prototipe di bawah atau gunakan bilah navigasi bawah smartphone untuk berinteraksi secara langsung.">Click each prototype screen on the guide or use the smartphone bottom navigation bar to interact directly.</p>
+          
+          <div class="sim-step-list">
+            <!-- Screen 1: Login -->
+            <div class="sim-step-item active" data-target-state="login">
+              <div class="sim-step-num">1</div>
+              <div class="sim-step-info">
+                <h4 data-lang-en="Prototype 1 — Login & Onboarding" data-lang-id="Prototype 1 — Login & Onboarding">Prototype 1 — Login & Onboarding</h4>
+                <p data-lang-en="Onboarding screen showing how enterprise users enter the circular system."
+                  data-lang-id="Halaman onboarding yang menunjukkan bagaimana pengguna perusahaan masuk ke dalam sistem.">Onboarding screen showing how enterprise users enter the circular system.</p>
+              </div>
+            </div>
+
+            <!-- Screen 2: Dashboard -->
+            <div class="sim-step-item" data-target-state="dashboard">
+              <div class="sim-step-num">2</div>
+              <div class="sim-step-info">
+                <h4 data-lang-en="Prototype 2 — Dashboard Monitoring (REQUIRED)" data-lang-id="Prototype 2 — Dashboard Monitoring (WAJIB)">Prototype 2 — Dashboard Monitoring (WAJIB)</h4>
+                <p data-lang-en="Main monitoring showing real-time pH, temperature, turbidity, COD, and trends."
+                  data-lang-id="Dashboard utama memantau pH, temperatur, kekeruhan, COD, dan grafik tren secara real-time.">Main monitoring showing real-time pH, temperature, turbidity, COD, and trends.</p>
+              </div>
+            </div>
+
+            <!-- Screen 3: Risk -->
+            <div class="sim-step-item" data-target-state="risk">
+              <div class="sim-step-num">3</div>
+              <div class="sim-step-info">
+                <h4 data-lang-en="Prototype 3 — AI Risk Detection" data-lang-id="Prototype 3 — AI Risk Detection">Prototype 3 — AI Risk Detection</h4>
+                <p data-lang-en="AI-driven potential contamination alerts and recommended adjustment actions."
+                  data-lang-id="Notifikasi deteksi risiko potensial oleh AI dan rekomendasi tindakan penanganan.">AI-driven potential contamination alerts and recommended adjustment actions.</p>
+              </div>
+            </div>
+
+            <!-- Screen 4: Report -->
+            <div class="sim-step-item" data-target-state="report">
+              <div class="sim-step-num">4</div>
+              <div class="sim-step-info">
+                <h4 data-lang-en="Prototype 4 — ESG Reporting" data-lang-id="Prototype 4 — ESG Reporting">Prototype 4 — ESG Reporting</h4>
+                <p data-lang-en="Compliance index scores for GRI, SASB, POJK 51, and environmental scores."
+                  data-lang-id="Halaman laporan kepatuhan ESG industri untuk GRI, SASB, POJK 51, dan skor lingkungan.">Compliance index scores for GRI, SASB, POJK 51, and environmental scores.</p>
+              </div>
+            </div>
+
+            <!-- Screen 5: Insight -->
+            <div class="sim-step-item" data-target-state="insight">
+              <div class="sim-step-num">5</div>
+              <div class="sim-step-info">
+                <h4 data-lang-en="Prototype 5 — Circular Economy Insight" data-lang-id="Prototype 5 — Circular Economy Insight">Prototype 5 — Circular Economy Insight</h4>
+                <p data-lang-en="Actionable AI recommendations showing cost savings and reuse potentials."
+                  data-lang-id="Halaman rekomendasi AI untuk efisiensi limbah dan potensi ekonomi sirkular.">Actionable AI recommendations showing cost savings and reuse potentials.</p>
+              </div>
+            </div>
+
+            <!-- Screen 6: Profile -->
+            <div class="sim-step-item" data-target-state="profile">
+              <div class="sim-step-num">6</div>
+              <div class="sim-step-info">
+                <h4 data-lang-en="Prototype 6 — Profile Screen" data-lang-id="Prototype 6 — Halaman Profil">Prototype 6 — Halaman Profil</h4>
+                <p data-lang-en="Detailed user administration, email contact, and corporate details."
+                  data-lang-id="Detail data administratif pengguna, kontak email, dan detail korporasi.">Detailed user administration, email contact, and corporate details.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Simulator Mockup Frame -->
+        <div class="phone-simulator-container reveal-right">
+          <div class="phone-sim-frame">
+            <div class="phone-sim-screen">
+              
+              <!-- Screen Header (controlled by active pages except Login) -->
+              <div class="phone-sim-header" id="phoneHeader">
+                <span id="phoneHeaderTitle">Login</span>
+                <button class="edit-profile-btn" id="phoneEditBtn" style="display: none;" data-lang-en="Edit Profile" data-lang-id="Edit Profil">Edit Profil</button>
+              </div>
+
+              <!-- Screen body -->
+              <div class="phone-sim-body" id="phoneBody">
+                
+                <!-- 1. LOGIN STATE -->
+                <div class="phone-state login-state active" id="state-login">
+                  <div class="login-green-header">
+                    <div class="login-logo-container">
+                      <img class="login-logo-img" src="assets/logo.png" alt="Circula Logo" />
+                      <h3 data-lang-en="Login" data-lang-id="Login">Login</h3>
+                      <div class="login-logo-subtitle" data-lang-en="Smart Circular Water Monitoring System" data-lang-id="Smart Circular Water Monitoring System">Smart Circular Water Monitoring System</div>
+                    </div>
+                  </div>
+
+                  <div class="login-card-container">
+                    <div class="login-input-box">
+                      <form onsubmit="handleMobileLogin(event)">
+                        <div class="login-field">
+                          <label for="mobEmail">Email</label>
+                          <input type="text" id="mobEmail" value="ifil@gmail.com" required placeholder="Masukkan email" />
+                        </div>
+                        <div class="login-field">
+                          <label for="mobPass" data-lang-en="Password" data-lang-id="Kata Sandi">Password</label>
+                          <input type="password" id="mobPass" value="••••••••" required placeholder="Masukkan kata sandi" />
+                        </div>
+                        <div class="login-options">
+                          <label><input type="checkbox" checked /> <span data-lang-en="Remember me" data-lang-id="Ingat saya">Remember me</span></label>
+                          <a href="#" onclick="alert('Reset password simulated')" data-lang-en="Forgot password?" data-lang-id="Lupa kata sandi?">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="login-btn-submit" data-lang-en="Login" data-lang-id="Masuk">Login</button>
+                      </form>
+
+                      <div class="login-divider" data-lang-en="or" data-lang-id="atau">or</div>
+                      
+                      <button class="login-google-btn" onclick="handleMobileLogin(event)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.186 4.114-3.518 0-6.386-2.87-6.386-6.39s2.868-6.39 6.386-6.39c1.626 0 3.097.615 4.225 1.625l3.05-3.05A12.753 12.753 0 0012.24 0C5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.91 0 12.24-4.853 12.24-12.24 0-.834-.085-1.637-.24-2.355H12.24z"/>
+                        </svg>
+                        <span data-lang-en="Sign in with Google" data-lang-id="Masuk dengan Google">Sign in with Google</span>
+                      </button>
+                    </div>
+
+                    <div class="login-register-link">
+                      <span data-lang-en="Don't have an account? " data-lang-id="Belum memiliki akun? ">Don't have an account? </span>
+                      <a href="#" onclick="alert('Register screen simulated')" data-lang-en="Register Now" data-lang-id="Daftar Sekarang">Register Now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. DASHBOARD STATE -->
+                <div class="phone-state" id="state-dashboard">
+                  <!-- Sustainable Score Card -->
+                  <div class="phone-card dash-score-card">
+                    <div class="dash-score-info">
+                      <h4 data-lang-en="Sustainable Score" data-lang-id="Sustainable Score">Sustainable Score</h4>
+                      <div class="score">87<span>/100</span></div>
+                    </div>
+                    <span class="dash-score-badge">Excellent</span>
+                  </div>
+
+                  <h4 class="section-title-phone" data-lang-en="Real Time Monitoring" data-lang-id="Real Time Monitoring">Real Time Monitoring</h4>
+                  
+                  <div class="dash-realtime-grid">
+                    <!-- item 1 -->
+                    <div class="dash-grid-item">
+                      <span class="item-lbl">💧 pH Waste</span>
+                      <span class="item-val" id="valPh">7.1</span>
+                      <span class="status-pill" id="lblPh">Normal</span>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="dash-grid-item">
+                      <span class="item-lbl" data-lang-en="🌡 Temperature" data-lang-id="🌡 Temperatur">🌡 Temperature</span>
+                      <span class="item-val" id="valTemp">29°C</span>
+                      <span class="status-pill" id="lblTemp">Normal</span>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="dash-grid-item">
+                      <span class="item-lbl" data-lang-en="🌊 Turbidity" data-lang-id="🌊 Turbidity">🌊 Turbidity</span>
+                      <span class="item-val" id="valTurb">18 NTU</span>
+                      <span class="status-pill" id="lblTurb">Normal</span>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="dash-grid-item">
+                      <span class="item-lbl">🧪 COD</span>
+                      <span class="item-val" id="valCod">42 mg/L</span>
+                      <span class="status-pill" id="lblCod">Normal</span>
+                    </div>
+                  </div>
+
+                  <h4 class="section-title-phone" data-lang-en="Monitoring Trend" data-lang-id="Monitoring Trend">Monitoring Trend</h4>
+                  
+                  <!-- SVG inline Line Chart trend -->
+                  <div class="phone-card">
+                    <div class="trend-chart-container">
+                      <div class="trend-x-grid">
+                        <span></span><span></span><span></span>
+                      </div>
+                      <!-- line chart svg representation -->
+                      <svg viewBox="0 0 180 80" style="position: absolute; inset: 10px 0 0; width: 100%; height: calc(100% - 10px);" fill="none">
+                        <!-- COD Red Line -->
+                        <path d="M10,65 L40,55 L70,68 L100,52 L130,58 L170,40" stroke="#DC2626" stroke-width="2" stroke-linecap="round" />
+                        <!-- Suhu Yellow Line -->
+                        <path d="M10,45 L40,52 L70,30 L100,42 L130,35 L170,38" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+                        <!-- pH Blue Line -->
+                        <path d="M10,25 L40,28 L70,22 L100,24 L130,23 L170,20" stroke="#0284C7" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                      <div class="trend-y-axis">
+                        <span>10:00</span>
+                        <span>14:00</span>
+                        <span>18:00</span>
+                        <span>22:00</span>
+                        <span>02:00</span>
+                        <span>06:00</span>
+                      </div>
+                    </div>
+                    
+                    <div class="trend-legend">
+                      <span class="cod">COD</span>
+                      <span class="suhu" data-lang-en="Temp" data-lang-id="Suhu">Temp</span>
+                      <span class="ph">pH</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. AI RISK STATE -->
+                <div class="phone-state" id="state-risk">
+                  <div class="phone-card risk-level-card">
+                    <div class="risk-level-info">
+                      <h5 data-lang-en="AI Risk Level" data-lang-id="AI Risk Level">AI Risk Level</h5>
+                      <div class="level-val" id="riskLevelVal">Medium</div>
+                      <span class="level-badge" id="riskLevelBadge">Warning</span>
+                    </div>
+                    <div class="risk-circle-visual" id="riskCircle">
+                      <div class="risk-circle-num" id="riskPercent">62<span>/100</span></div>
+                    </div>
+                  </div>
+
+                  <!-- Detected warnings (pink background) -->
+                  <div class="pink-warning-card" id="riskAlertCard">
+                    <div class="title-area">
+                      ⚠️ <span data-lang-en="Warning Detected" data-lang-id="Peringatan Terdeteksi">Warning Detected</span>
+                    </div>
+                    <ul>
+                      <li data-lang-en="AI detects potential contamination risk within next 12 hours."
+                        data-lang-id="AI mendeteksi potensi peningkatan risiko pencemaran dalam 12 jam ke depan.">AI detects potential contamination risk within next 12 hours.</li>
+                      <li data-lang-en="AI detects pH increase up to 8.5."
+                        data-lang-id="AI mendeteksi peningkatan pH hingga 8.5.">AI detects pH increase up to 8.5.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Action Recommendation (orange background) -->
+                  <div class="orange-rec-card" id="riskActionCard">
+                    <h5 data-lang-en="Action Recommendation" data-lang-id="Rekomendasi Tindakan">Rekomendasi Tindakan</h5>
+                    <p data-lang-en="Reduce usage of chemical raw material X by 15% and perform checkups regularly."
+                      data-lang-id="Kurangi penggunaan bahan kimia X sebesar 15% dan lakukan pengecekan secara berkala.">Kurangi penggunaan bahan kimia X sebesar 15% dan lakukan pengecekan secara berkala.</p>
+                    <button class="sim-auth-btn" style="margin-top: 10px; padding: 6px 12px; font-size: 0.72rem;" onclick="dismissRiskAlert(this)" data-lang-en="Apply Adjustments" data-lang-id="Terapkan Tindakan">Terapkan Tindakan</button>
+                  </div>
+
+                  <!-- AI 7 Days analysis progress bars -->
+                  <h4 class="section-title-phone" data-lang-en="7-Days AI Analysis" data-lang-id="Analisis AI 7 hari">Analisis AI 7 hari</h4>
+                  
+                  <div class="phone-card">
+                    <div class="ai-bar-metric">
+                      <label><span>pH Overload</span> <span>78%</span></label>
+                      <div class="ai-bar-bg">
+                        <div class="ai-bar-fill" style="width: 78%; background: #DC2626;"></div>
+                      </div>
+                    </div>
+                    <div class="ai-bar-metric">
+                      <label><span data-lang-en="High Temperature" data-lang-id="Suhu Tinggi">Suhu Tinggi</span> <span>52%</span></label>
+                      <div class="ai-bar-bg">
+                        <div class="ai-bar-fill" style="width: 52%; background: #F59E0B;"></div>
+                      </div>
+                    </div>
+                    <div class="ai-bar-metric">
+                      <label><span>Turbidity</span> <span>24%</span></label>
+                      <div class="ai-bar-bg">
+                        <div class="ai-bar-fill" style="width: 24%; background: #4CA75B;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4. ESG REPORT STATE -->
+                <div class="phone-state" id="state-report">
+                  <!-- Grid layout -->
+                  <div class="report-grid">
+                    <div class="report-item-card">
+                      <div class="title" data-lang-en="Environmental Score" data-lang-id="Environmental Score">Environmental Score</div>
+                      <div class="big-num">89</div>
+                      <div class="sub-lbl" data-lang-en="Target Achieved 7.1" data-lang-id="Target Achieved 7.1">Target Achieved 7.1</div>
+                    </div>
+                    <div class="report-item-card">
+                      <div class="title" data-lang-en="ESG Compliance" data-lang-id="ESG Compliance">ESG Compliance</div>
+                      <div class="big-num">92%</div>
+                      <div class="sub-lbl" data-lang-en="Target 95%" data-lang-id="Target 95%">Target 95%</div>
+                    </div>
+                    <div class="report-item-card">
+                      <div class="title" data-lang-en="Carbon Reduction" data-lang-id="Carbon Reduction">Carbon Reduction</div>
+                      <div class="big-num">12%</div>
+                      <div class="sub-lbl" data-lang-en="VS previous month" data-lang-id="VS bulan lalu">VS bulan lalu</div>
+                    </div>
+                    <div class="report-item-card">
+                      <div class="title" data-lang-en="Sustainability Score" data-lang-id="Sustainability Score">Sustainability Score</div>
+                      <div class="big-num">87</div>
+                      <div class="sub-lbl">/ 100</div>
+                    </div>
+                  </div>
+
+                  <!-- Sustainability analytics -->
+                  <h4 class="section-title-phone" data-lang-en="Sustainability Analytics" data-lang-id="Sustainability Analytics">Sustainability Analytics</h4>
+                  
+                  <div class="phone-card">
+                    <div class="ai-bar-metric">
+                      <label><span data-lang-en="Clean Water Ratio" data-lang-id="Air Bersih">Air Bersih</span> <span>90%</span></label>
+                      <div class="ai-bar-bg">
+                        <div class="ai-bar-fill" style="width: 90%; background: #0284C7;"></div>
+                      </div>
+                    </div>
+                    <div class="ai-bar-metric">
+                      <label><span>CO2 Emission Offset</span> <span>42%</span></label>
+                      <div class="ai-bar-bg">
+                        <div class="ai-bar-fill" style="width: 42%; background: #EA580C;"></div>
+                      </div>
+                    </div>
+                    <div class="ai-bar-metric">
+                      <label><span data-lang-en="Waste Reduction" data-lang-id="Pengurangan Limbah">Pengurangan Limbah</span> <span>81%</span></label>
+                      <div class="ai-bar-bg">
+                        <div class="ai-bar-fill" style="width: 81%; background: #4CA75B;"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="sim-auth-btn" style="padding: 10px;" onclick="triggerMobileReportPdf()" data-lang-en="Download Audited ESG PDF" data-lang-id="Unduh PDF Audit ESG">Unduh PDF Audit ESG</button>
+                </div>
+
+                <!-- 5. INSIGHT STATE -->
+                <div class="phone-state" id="state-insight">
+                  <div class="insight-subtitle"
+                    data-lang-en="AI Recommendations for waste management efficiency and circular economy implementation."
+                    data-lang-id="Rekomendasi AI untuk efisiensi pengelolaan limbah dan implementasi circular economy.">Rekomendasi AI untuk efisiensi pengelolaan limbah dan implementasi circular economy.</div>
+
+                  <!-- Recommendation List -->
+                  <div class="insight-card-item">
+                    <div class="insight-card-icon">♻</div>
+                    <div class="insight-card-body">
+                      <h5 data-lang-en="Wastewater Reuse Match" data-lang-id="Reuse">Reuse</h5>
+                      <p data-lang-en="Repurpose up to 25% of filter output residue as secondary industrial raw material."
+                        data-lang-id="Manfaatkan kembali limbah sebesar 25% sebagai bahan baku sekunder.">Manfaatkan kembali limbah sebesar 25% sebagai bahan baku sekunder.</p>
+                      <span class="insight-card-pill" data-lang-en="Potential / 25% reuse" data-lang-id="Potensi / 25% reuse">Potensi / 25% reuse</span>
+                    </div>
+                  </div>
+
+                  <div class="insight-card-item">
+                    <div class="insight-card-icon">💵</div>
+                    <div class="insight-card-body">
+                      <h5 data-lang-en="Cost Savings Optimization" data-lang-id="Hemat Biaya">Hemat Biaya</h5>
+                      <p data-lang-en="Adjust wastewater chemical treatments to save plant operational expenses."
+                        data-lang-id="Optimasi proses pengolahan dapat menekan biaya operasional.">Optimasi proses pengolahan dapat menekan biaya operasional.</p>
+                      <span class="insight-card-pill" data-lang-en="Rp 12M / month" data-lang-id="Rp 12 juta / bulan">Rp 12 juta / bulan</span>
+                    </div>
+                  </div>
+
+                  <div class="insight-card-item">
+                    <div class="insight-card-icon">✓</div>
+                    <div class="insight-card-body">
+                      <h5 data-lang-en="Emission Offsets" data-lang-id="Reduksi Emisi">Reduksi Emisi</h5>
+                      <p data-lang-en="Lower emission intensity index by tracking local recycling streams."
+                        data-lang-id="Pengurangan emisi karbon dari proses daur ulang limbah.">Pengurangan emisi karbon dari proses daur ulang limbah.</p>
+                      <span class="insight-card-pill" data-lang-en="Emissions down 10%" data-lang-id="Emisi turun 10%">Emisi turun 10%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6. PROFILE STATE -->
+                <div class="phone-state" id="state-profile">
+                  <div class="phone-card profile-user-card">
+                    <div class="profile-avatar">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                      </svg>
+                    </div>
+                    <div class="profile-username">
+                      <h5>Ifil Kotak</h5>
+                      <span class="role">Admin</span>
+                    </div>
+                  </div>
+
+                  <div class="profile-slogan-card"
+                    data-lang-en="Circula : AI-Powered Smart Waste Intelligence Application for Sustainable Industry through IoT Ecosystem Integration"
+                    data-lang-id="Circula : Aplikasi Kecerdasan Limbah Pintar Berbasis AI untuk Industri Berkelanjutan melalui Integrasi Ekosistem IoT">
+                    Circula : AI-Powered Smart Waste Intelligence Application for Sustainable Industry through IoT Ecosystem Integration
+                  </div>
+
+                  <h4 class="profile-section-title" data-lang-en="Personal Information" data-lang-id="Informasi Pribadi">Informasi Pribadi</h4>
+                  
+                  <div class="phone-card">
+                    <div class="profile-info-list">
+                      <div class="profile-info-item">
+                        <span class="lbl" data-lang-en="Full Name" data-lang-id="Nama Lengkap">Nama Lengkap</span>
+                        <span class="val">Imamul Soifillah S.Kom M.Si</span>
+                      </div>
+                      <div class="profile-info-item">
+                        <span class="lbl">Email</span>
+                        <span class="val">ifil@gmail.com</span>
+                      </div>
+                      <div class="profile-info-item">
+                        <span class="lbl" data-lang-en="Phone Number" data-lang-id="Nomor Handphone">Nomor Handphone</span>
+                        <span class="val">+62 812-3147-1014</span>
+                      </div>
+                      <div class="profile-info-item">
+                        <span class="lbl" data-lang-en="Address" data-lang-id="Alamat">Alamat</span>
+                        <span class="val">Burneh Raya</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Phone Bottom Navigation Bar -->
+              <div class="phone-sim-nav" id="phoneNavBar" style="display: none;">
+                <!-- Icon 1: Dashboard -->
+                <button class="phone-nav-item active" data-target-state="dashboard" aria-label="Dashboard">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </button>
+                <!-- Icon 2: Risk -->
+                <button class="phone-nav-item" data-target-state="risk" aria-label="AI Risk">
+                  <svg viewBox="0 0 24 24">
+                    <line x1="18" y1="20" x2="18" y2="10"/>
+                    <line x1="12" y1="20" x2="12" y2="4"/>
+                    <line x1="6" y1="20" x2="6" y2="14"/>
+                  </svg>
+                </button>
+                <!-- Icon 3: Report -->
+                <button class="phone-nav-item" data-target-state="report" aria-label="ESG Report">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                  </svg>
+                </button>
+                <!-- Icon 4: Insight -->
+                <button class="phone-nav-item" data-target-state="insight" aria-label="Insights">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                  </svg>
+                </button>
+                <!-- Icon 5: Profile -->
+                <button class="phone-nav-item" data-target-state="profile" aria-label="Profile">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FIELD APP PREVIEW ==================== -->
+  <section class="app-preview">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">
+          <span class="badge-dot"></span>
+          <span data-lang-en="Prototypes Overview" data-lang-id="Ikhtisar Prototipe">Ikhtisar Prototipe</span>
+        </div>
+        <h2 class="section-title" data-lang-en="Circula Mobile <span>Mockups Carousel</span>"
+          data-lang-id="Carousel <span>Mockup Mobile</span> Circula">Circula Mobile <span>Mockups Carousel</span></h2>
+        <p class="section-subtitle" data-lang-en="Continuous visual carousel showing the high-fidelity screens of the water monitoring app."
+          data-lang-id="Carousel visual berkelanjutan yang menampilkan layar resolusi tinggi dari aplikasi pemantauan air.">Continuous visual carousel showing the high-fidelity screens of the water monitoring app.</p>
+      </div>
+    </div>
+
+    <!-- Infinite scroll carousel of mobile screen mockups -->
+    <div class="preview-carousel reveal-scale">
+      <div class="preview-track-wrapper">
+        <div class="preview-track" id="previewTrack">
+          <!-- Item 1: Login -->
+          <div class="preview-item">
+            <div class="preview-phone">
+              <svg viewBox="0 0 220 440" style="background:#E3F2FD; border-radius: 20px; width:100%; font-family:sans-serif;">
+                <!-- Green Header background -->
+                <rect x="0" y="0" width="220" height="150" fill="#4CA75B" />
+                <image href="assets/logo.png" x="85" y="25" width="50" height="50" />
+                <text x="110" y="95" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">Login</text>
+                <text x="110" y="115" fill="#A7F3D0" font-size="6.5" font-weight="bold" text-anchor="middle">Smart Circular Water Monitoring System</text>
+                <!-- Form Box background -->
+                <rect x="15" y="160" width="190" height="230" rx="10" fill="#fff" />
+                <!-- Email box -->
+                <rect x="25" y="180" width="170" height="28" rx="6" fill="#fff" stroke="#E2E8F0" stroke-width="1" />
+                <text x="35" y="198" fill="#1E293B" font-size="8">ifil@gmail.com</text>
+                <!-- Password box -->
+                <rect x="25" y="220" width="170" height="28" rx="6" fill="#fff" stroke="#E2E8F0" stroke-width="1" />
+                <text x="35" y="238" fill="#94A3B8" font-size="8">••••••••</text>
+                <!-- Remember me & Forgot Password -->
+                <rect x="25" y="260" width="8" height="8" rx="2" fill="#4CA75B" />
+                <text x="38" y="267" fill="#64748B" font-size="6">Ingat saya</text>
+                <text x="195" y="267" fill="#4CA75B" font-size="6" text-anchor="end">Lupa kata sandi?</text>
+                <!-- Login Button -->
+                <rect x="25" y="285" width="170" height="28" rx="6" fill="#4CA75B" />
+                <text x="110" y="302" fill="#fff" font-size="9" font-weight="bold" text-anchor="middle">Login</text>
+                <!-- Or divider -->
+                <line x1="25" y1="330" x2="95" y2="330" stroke="#E2E8F0" stroke-width="1" />
+                <text x="110" y="333" fill="#94A3B8" font-size="7" text-anchor="middle">atau</text>
+                <line x1="125" y1="330" x2="195" y2="330" stroke="#E2E8F0" stroke-width="1" />
+                <!-- Google Button -->
+                <rect x="25" y="348" width="170" height="28" rx="6" fill="#fff" stroke="#E2E8F0" stroke-width="1" />
+                <text x="110" y="365" fill="#1E293B" font-size="8" text-anchor="middle">Google Sign In</text>
+                <!-- Register link -->
+                <text x="110" y="415" fill="#64748B" font-size="7" text-anchor="middle">Belum memiliki akun? <tspan fill="#4CA75B" font-weight="bold">Daftar Sekarang</tspan></text>
+              </svg>
+            </div>
+            <div class="preview-label" data-lang-en="Login Page" data-lang-id="Halaman Login">Login Page</div>
+          </div>
+          <!-- Item 2: Dashboard -->
+          <div class="preview-item">
+            <div class="preview-phone">
+              <svg viewBox="0 0 220 440" style="background:#E3F2FD; border-radius: 20px; width:100%; font-family:sans-serif;">
+                <rect x="0" y="0" width="220" height="40" fill="#4CA75B" />
+                <text x="110" y="25" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Dashboard</text>
+                <rect x="12" y="52" width="196" height="60" rx="8" fill="#4CA75B" />
+                <text x="24" y="72" fill="#e8f5e9" font-size="7">Sustainable Score</text>
+                <text x="24" y="96" fill="#fff" font-size="20" font-weight="900">87<tspan font-size="10">/100</tspan></text>
+                <rect x="145" y="68" width="50" height="15" rx="7" fill="rgba(255,255,255,0.22)" />
+                <text x="170" y="78" fill="#fff" font-size="6" font-weight="bold" text-anchor="middle">Excellent</text>
+                <text x="12" y="132" fill="#1e293b" font-size="7" font-weight="bold">Real Time Monitoring</text>
+                <!-- widgets -->
+                <rect x="12" y="142" width="92" height="42" rx="6" fill="#fff" />
+                <text x="20" y="154" fill="#64748B" font-size="5.5" font-weight="bold">💧 pH Waste</text>
+                <text x="20" y="168" fill="#0F172A" font-size="10" font-weight="bold">7.1</text>
+                <rect x="20" y="172" width="26" height="8" rx="4" fill="#E8F5E9" />
+                <text x="33" y="178" fill="#2E7D32" font-size="4.5" font-weight="bold" text-anchor="middle">Normal</text>
+                <rect x="116" y="142" width="92" height="42" rx="6" fill="#fff" />
+                <text x="124" y="154" fill="#64748B" font-size="5.5" font-weight="bold">🌡 Temperatur</text>
+                <text x="124" y="168" fill="#0F172A" font-size="10" font-weight="bold">29°C</text>
+                <rect x="124" y="172" width="26" height="8" rx="4" fill="#E8F5E9" />
+                <text x="137" y="178" fill="#2E7D32" font-size="4.5" font-weight="bold" text-anchor="middle">Normal</text>
+                <rect x="12" y="190" width="92" height="42" rx="6" fill="#fff" />
+                <text x="20" y="202" fill="#64748B" font-size="5.5" font-weight="bold">🌊 Turbidity</text>
+                <text x="20" y="216" fill="#0F172A" font-size="10" font-weight="bold">18 NTU</text>
+                <rect x="20" y="220" width="26" height="8" rx="4" fill="#E8F5E9" />
+                <text x="33" y="226" fill="#2E7D32" font-size="4.5" font-weight="bold" text-anchor="middle">Normal</text>
+                <rect x="116" y="190" width="92" height="42" rx="6" fill="#fff" />
+                <text x="124" y="202" fill="#64748B" font-size="5.5" font-weight="bold">🧪 COD</text>
+                <text x="124" y="216" fill="#0F172A" font-size="10" font-weight="bold">42 mg/L</text>
+                <rect x="124" y="220" width="26" height="8" rx="4" fill="#E8F5E9" />
+                <text x="137" y="226" fill="#2E7D32" font-size="4.5" font-weight="bold" text-anchor="middle">Normal</text>
+                <text x="12" y="248" fill="#1e293b" font-size="7" font-weight="bold">Monitoring Trend</text>
+                <rect x="12" y="254" width="196" height="130" rx="8" fill="#fff" />
+                <path d="M22,330 L52,295 L90,308 L128,284 L166,298 L198,275" stroke="#DC2626" stroke-width="1.5" fill="none" stroke-linecap="round" />
+                <path d="M22,315 L52,322 L90,280 L128,300 L166,285 L198,295" stroke="#F59E0B" stroke-width="1.5" fill="none" stroke-linecap="round" />
+                <path d="M22,275 L52,278 L90,272 L128,274 L166,273 L198,270" stroke="#0284C7" stroke-width="1.5" fill="none" stroke-linecap="round" />
+                <text x="30" y="375" fill="#94A3B8" font-size="4.5">10:00</text>
+                <text x="70" y="375" fill="#94A3B8" font-size="4.5">14:00</text>
+                <text x="110" y="375" fill="#94A3B8" font-size="4.5">18:00</text>
+                <text x="150" y="375" fill="#94A3B8" font-size="4.5">22:00</text>
+                <!-- Bottom navigation mock -->
+                <rect x="0" y="398" width="220" height="42" fill="#fff" />
+                <line x1="0" y1="398" x2="220" y2="398" stroke="#E2E8F0" stroke-width="0.5" />
+                <circle cx="28" cy="415" r="8" fill="rgba(76,167,91,0.12)" /><circle cx="28" cy="415" r="3" fill="#4CA75B" />
+                <circle cx="70" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="110" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="150" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="192" cy="415" r="3" fill="#94A3B8" />
+              </svg>
+            </div>
+            <div class="preview-label" data-lang-en="Dashboard Page" data-lang-id="Halaman Dashboard">Dashboard Page</div>
+          </div>
+          <!-- Item 3: AI Risk -->
+          <div class="preview-item">
+            <div class="preview-phone">
+              <svg viewBox="0 0 220 440" style="background:#E3F2FD; border-radius: 20px; width:100%; font-family:sans-serif;">
+                <rect x="0" y="0" width="220" height="40" fill="#4CA75B" />
+                <text x="110" y="25" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Deteksi Risiko AI</text>
+                <rect x="12" y="52" width="196" height="75" rx="8" fill="#fff" />
+                <text x="24" y="72" fill="#64748B" font-size="7">AI Risk Level</text>
+                <text x="24" y="96" fill="#EA580C" font-size="18" font-weight="bold">Medium</text>
+                <rect x="24" y="104" width="38" height="12" rx="6" fill="#FFEDD5" />
+                <text x="43" y="112" fill="#D97706" font-size="5" font-weight="bold" text-anchor="middle">Warning</text>
+                <circle cx="160" cy="89" r="24" fill="none" stroke="#F1F5F9" stroke-width="6" />
+                <path d="M160,65 A24,24 0 1,1 138,99" fill="none" stroke="#EA580C" stroke-width="6" stroke-linecap="round" />
+                <text x="160" y="93" fill="#1E293B" font-size="9" font-weight="bold" text-anchor="middle">62%</text>
+                <rect x="12" y="138" width="196" height="150" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1" />
+                <text x="24" y="158" fill="#991B1B" font-size="8" font-weight="bold">Risiko Pencemaran Terdeteksi</text>
+                <text x="24" y="178" fill="#7F1D1D" font-size="6">AI mendeteksi anomali pada pH limbah cair.</text>
+                <text x="24" y="190" fill="#7F1D1D" font-size="6">pH naik ke ambang batas 8.5 dalam 30 menit.</text>
+                <text x="24" y="202" fill="#7F1D1D" font-size="6">Risiko pencemaran sungai tergolong tinggi.</text>
+                <text x="24" y="225" fill="#991B1B" font-size="7" font-weight="bold">Rekomendasi Tindakan:</text>
+                <text x="24" y="240" fill="#7F1D1D" font-size="6">• Netralkan air limbah dengan katup penyangga.</text>
+                <text x="24" y="250" fill="#7F1D1D" font-size="6">• Alihkan pembuangan ke bak penampungan.</text>
+                <rect x="24" y="265" width="172" height="18" rx="4" fill="#DC2626" />
+                <text x="110" y="277" fill="#fff" font-size="7" font-weight="bold" text-anchor="middle">Terapkan Tindakan Penyesuaian</text>
+                <rect x="0" y="398" width="220" height="42" fill="#fff" />
+                <line x1="0" y1="398" x2="220" y2="398" stroke="#E2E8F0" stroke-width="0.5" />
+                <circle cx="28" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="70" cy="415" r="8" fill="rgba(76,167,91,0.12)" /><circle cx="70" cy="415" r="3" fill="#4CA75B" />
+                <circle cx="110" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="150" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="192" cy="415" r="3" fill="#94A3B8" />
+              </svg>
+            </div>
+            <div class="preview-label" data-lang-en="AI Risk Page" data-lang-id="Halaman AI Risiko">AI Risk Page</div>
+          </div>
+          <!-- Item 4: ESG Report -->
+          <div class="preview-item">
+            <div class="preview-phone">
+              <svg viewBox="0 0 220 440" style="background:#E3F2FD; border-radius: 20px; width:100%; font-family:sans-serif;">
+                <rect x="0" y="0" width="220" height="40" fill="#4CA75B" />
+                <text x="110" y="25" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">ESG Reporting</text>
+                <rect x="12" y="52" width="92" height="60" rx="8" fill="#fff" />
+                <text x="20" y="68" fill="#64748B" font-size="5" font-weight="bold">Environmental Score</text>
+                <text x="20" y="92" fill="#4CA75B" font-size="20" font-weight="900">89</text>
+                <text x="20" y="102" fill="#94A3B8" font-size="5">Target Achieved 7.1</text>
+                <rect x="116" y="52" width="92" height="60" rx="8" fill="#fff" />
+                <text x="124" y="68" fill="#64748B" font-size="5" font-weight="bold">ESG Compliance</text>
+                <text x="124" y="92" fill="#4CA75B" font-size="20" font-weight="900">92%</text>
+                <text x="124" y="102" fill="#94A3B8" font-size="5">Target 95%</text>
+                <rect x="12" y="122" width="92" height="60" rx="8" fill="#fff" />
+                <text x="20" y="138" fill="#64748B" font-size="5" font-weight="bold">Carbon Reduction</text>
+                <text x="20" y="162" fill="#4CA75B" font-size="20" font-weight="900">12%</text>
+                <text x="20" y="172" fill="#94A3B8" font-size="5">VS bulan lalu</text>
+                <rect x="116" y="122" width="92" height="60" rx="8" fill="#fff" />
+                <text x="124" y="138" fill="#64748B" font-size="5" font-weight="bold">Sustainability Score</text>
+                <text x="124" y="162" fill="#4CA75B" font-size="20" font-weight="900">87</text>
+                <text x="124" y="172" fill="#94A3B8" font-size="5">/ 100</text>
+                <text x="12" y="200" fill="#1E293B" font-size="7.5" font-weight="bold">Sustainability Analytics</text>
+                <rect x="12" y="210" width="196" height="110" rx="8" fill="#fff" />
+                <text x="20" y="226" fill="#64748B" font-size="5.5" font-weight="bold">Air Bersih (Clean Water Ratio)</text>
+                <text x="200" y="226" fill="#0F172A" font-size="5.5" font-weight="bold" text-anchor="end">90%</text>
+                <rect x="20" y="232" width="180" height="6" rx="3" fill="#F1F5F9" />
+                <rect x="20" y="232" width="162" height="6" rx="3" fill="#0284C7" />
+                <text x="20" y="256" fill="#64748B" font-size="5.5" font-weight="bold">CO2 Emission Offset</text>
+                <text x="200" y="256" fill="#0F172A" font-size="5.5" font-weight="bold" text-anchor="end">42%</text>
+                <rect x="20" y="262" width="180" height="6" rx="3" fill="#F1F5F9" />
+                <rect x="20" y="262" width="75.6" height="6" rx="3" fill="#EA580C" />
+                <text x="20" y="286" fill="#64748B" font-size="5.5" font-weight="bold">Pengurangan Limbah (Waste Reduction)</text>
+                <text x="200" y="286" fill="#0F172A" font-size="5.5" font-weight="bold" text-anchor="end">81%</text>
+                <rect x="20" y="292" width="180" height="6" rx="3" fill="#F1F5F9" />
+                <rect x="20" y="292" width="145.8" height="6" rx="3" fill="#4CA75B" />
+                <rect x="12" y="336" width="196" height="30" rx="8" fill="#4CA75B" />
+                <text x="110" y="354" fill="#fff" font-size="8" font-weight="bold" text-anchor="middle">Unduh Laporan ESG (Download ESG)</text>
+                <rect x="0" y="398" width="220" height="42" fill="#fff" />
+                <line x1="0" y1="398" x2="220" y2="398" stroke="#E2E8F0" stroke-width="0.5" />
+                <circle cx="28" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="70" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="110" cy="415" r="8" fill="rgba(76,167,91,0.12)" /><circle cx="110" cy="415" r="3" fill="#4CA75B" />
+                <circle cx="150" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="192" cy="415" r="3" fill="#94A3B8" />
+              </svg>
+            </div>
+            <div class="preview-label" data-lang-en="ESG Report Page" data-lang-id="Halaman Laporan ESG">ESG Report Page</div>
+          </div>
+          <!-- Item 5: Insight -->
+          <div class="preview-item">
+            <div class="preview-phone">
+              <svg viewBox="0 0 220 440" style="background:#E3F2FD; border-radius: 20px; width:100%; font-family:sans-serif;">
+                <rect x="0" y="0" width="220" height="40" fill="#4CA75B" />
+                <text x="110" y="25" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Insight</text>
+                <text x="12" y="55" fill="#64748B" font-size="5">AI Recommendations for waste management and circular economy.</text>
+                <rect x="12" y="65" width="196" height="55" rx="8" fill="#fff" />
+                <circle cx="28" cy="92" r="10" fill="#E8F5E9" /><text x="28" y="95" fill="#2E7D32" font-size="9" text-anchor="middle">♻</text>
+                <text x="45" y="83" fill="#0F172A" font-size="7" font-weight="bold">Wastewater Reuse Match</text>
+                <text x="45" y="93" fill="#64748B" font-size="5">Manfaatkan kembali limbah sebesar 25%</text>
+                <text x="45" y="101" fill="#64748B" font-size="5">sebagai air utilitas boiler pabrik.</text>
+                <rect x="148" y="76" width="50" height="10" rx="5" fill="#E8F5E9" /><text x="173" y="83" fill="#2E7D32" font-size="4.5" font-weight="bold" text-anchor="middle">Potensi 25%</text>
+                <rect x="12" y="128" width="196" height="55" rx="8" fill="#fff" />
+                <circle cx="28" cy="155" r="10" fill="#FEF3C7" /><text x="28" y="158" fill="#D97706" font-size="8" text-anchor="middle">💵</text>
+                <text x="45" y="146" fill="#0F172A" font-size="7" font-weight="bold">Cost Savings Optimization</text>
+                <text x="45" y="156" fill="#64748B" font-size="5">Optimasi proses pengolahan limbah air</text>
+                <text x="45" y="164" fill="#64748B" font-size="5">dapat menekan biaya operasional pabrik.</text>
+                <rect x="142" y="139" width="56" height="10" rx="5" fill="#FEF3C7" /><text x="170" y="146" fill="#B45309" font-size="4.5" font-weight="bold" text-anchor="middle">Rp 12jt/bulan</text>
+                <rect x="12" y="191" width="196" height="55" rx="8" fill="#fff" />
+                <circle cx="28" cy="218" r="10" fill="#E0F2FE" /><text x="28" y="221" fill="#0369A1" font-size="8" text-anchor="middle">✓</text>
+                <text x="45" y="209" fill="#0F172A" font-size="7" font-weight="bold">Emission Offsets</text>
+                <text x="45" y="219" fill="#64748B" font-size="5">Pengurangan emisi karbon dari proses</text>
+                <text x="45" y="227" fill="#64748B" font-size="5">daur ulang dan hemat energi motor air.</text>
+                <rect x="142" y="202" width="56" height="10" rx="5" fill="#E0F2FE" /><text x="170" y="209" fill="#0369A1" font-size="4.5" font-weight="bold" text-anchor="middle">Emisi turun 10%</text>
+                <rect x="0" y="398" width="220" height="42" fill="#fff" />
+                <line x1="0" y1="398" x2="220" y2="398" stroke="#E2E8F0" stroke-width="0.5" />
+                <circle cx="28" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="70" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="110" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="150" cy="415" r="8" fill="rgba(76,167,91,0.12)" /><circle cx="150" cy="415" r="3" fill="#4CA75B" />
+                <circle cx="192" cy="415" r="3" fill="#94A3B8" />
+              </svg>
+            </div>
+            <div class="preview-label" data-lang-en="Insight Page" data-lang-id="Halaman Insight">Insight Page</div>
+          </div>
+          <!-- Item 6: Profile -->
+          <div class="preview-item">
+            <div class="preview-phone">
+              <svg viewBox="0 0 220 440" style="background:#E3F2FD; border-radius: 20px; width:100%; font-family:sans-serif;">
+                <rect x="0" y="0" width="220" height="40" fill="#4CA75B" />
+                <text x="110" y="25" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Profile</text>
+                <rect x="12" y="52" width="196" height="50" rx="8" fill="#fff" />
+                <circle cx="32" cy="77" r="14" fill="#E8F5E9" />
+                <path d="M32,69 A6,6 0 0,0 26,75 L38,75 A6,6 0 0,0 32,69" fill="#4CA75B" /><circle cx="32" cy="70" r="3" fill="#4CA75B" />
+                <text x="56" y="74" fill="#0F172A" font-size="8" font-weight="bold">Ifil Kotak</text>
+                <text x="56" y="86" fill="#94A3B8" font-size="6.5" font-weight="500">Admin</text>
+                <rect x="12" y="110" width="196" height="40" rx="8" fill="#0A2B21" />
+                <text x="20" y="124" fill="#A7F3D0" font-size="5.5" font-weight="bold">Circula : AI-Powered Smart Waste Intelligence</text>
+                <text x="20" y="136" fill="#A7F3D0" font-size="5.5" font-weight="bold">Application for Sustainable Industry through IoT</text>
+                <text x="12" y="165" fill="#1e293b" font-size="7" font-weight="bold">Informasi Pribadi</text>
+                <rect x="12" y="173" width="196" height="150" rx="8" fill="#fff" />
+                <text x="22" y="191" fill="#64748B" font-size="5.5">Nama Lengkap</text>
+                <text x="22" y="202" fill="#0F172A" font-size="7.5" font-weight="bold">Imamul Soifillah S.Kom M.Si</text>
+                <line x1="22" y1="210" x2="198" y2="210" stroke="#F1F5F9" stroke-width="1" />
+                <text x="22" y="226" fill="#64748B" font-size="5.5">Email</text>
+                <text x="22" y="237" fill="#0F172A" font-size="7.5" font-weight="bold">ifil@gmail.com</text>
+                <line x1="22" y1="245" x2="198" y2="245" stroke="#F1F5F9" stroke-width="1" />
+                <text x="22" y="261" fill="#64748B" font-size="5.5">Nomor Handphone</text>
+                <text x="22" y="272" fill="#0F172A" font-size="7.5" font-weight="bold">+62 812-3147-1014</text>
+                <line x1="22" y1="280" x2="198" y2="280" stroke="#F1F5F9" stroke-width="1" />
+                <text x="22" y="296" fill="#64748B" font-size="5.5">Alamat</text>
+                <text x="22" y="307" fill="#0F172A" font-size="7.5" font-weight="bold">Burneh Raya</text>
+                <rect x="0" y="398" width="220" height="42" fill="#fff" />
+                <line x1="0" y1="398" x2="220" y2="398" stroke="#E2E8F0" stroke-width="0.5" />
+                <circle cx="28" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="70" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="110" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="150" cy="415" r="3" fill="#94A3B8" />
+                <circle cx="192" cy="415" r="8" fill="rgba(76,167,91,0.12)" /><circle cx="192" cy="415" r="3" fill="#4CA75B" />
+              </svg>
+            </div>
+            <div class="preview-label" data-lang-en="Profile Page" data-lang-id="Halaman Profil">Profile Page</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== IMPACT CALCULATOR ==================== -->
+  <section class="impact-section" id="impact">
+    <div class="container">
+      <div class="impact-layout">
+        <div class="reveal-left">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span data-lang-en="Impact Decarbonization" data-lang-id="Dekarbonisasi Dampak">Dekarbonisasi Dampak</span>
+          </div>
+          <h2 class="section-title" data-lang-en="Industrial Wastewater <span>Decarbonization Calculator</span>"
+            data-lang-id="Kalkulator <span>Dekarbonisasi Air Limbah</span> Industri">Industrial Wastewater <span>Decarbonization Calculator</span></h2>
+          <p style="color: var(--text-secondary); margin-bottom: 24px;"
+            data-lang-en="Adjust your wastewater volume processing slider to see real-time offsets for emission, equivalent trees saved, and credit points generated."
+            data-lang-id="Sesuaikan slider pengolahan volume air limbah untuk melihat secara real-time pengurangan emisi, pohon terselamatkan, dan poin kredit yang dihasilkan.">
+            Adjust your wastewater volume processing slider to see real-time offsets for emission, equivalent trees saved, and credit points generated.</p>
+        </div>
+
+        <div class="calc-box reveal-right">
+          <h3 class="calc-title" data-lang-en="Wastewater Output Impact" data-lang-id="Dampak Keluaran Air Limbah">Wastewater Output Impact</h3>
+
+          <!-- Waste Type Selector Tabs -->
+          <div class="waste-selector">
+            <button class="waste-btn active" data-type="wastewater" id="btnPlastic">
+              <span class="icon">💧</span>
+              <span data-lang-en="Volume" data-lang-id="Volume Air">Volume Air</span>
+            </button>
+            <button class="waste-btn" data-type="chemical" id="btnPaper">
+              <span class="icon">🧪</span>
+              <span data-lang-en="Chemicals" data-lang-id="Zat Kimia">Zat Kimia</span>
+            </button>
+            <button class="waste-btn" data-type="cod" id="btnGlass">
+              <span class="icon">🦠</span>
+              <span data-lang-en="COD Load" data-lang-id="Beban COD">Beban COD</span>
+            </button>
+            <button class="waste-btn" data-type="tss" id="btnMetal">
+              <span class="icon">🌫</span>
+              <span data-lang-en="Solids TSS" data-lang-id="Zat TSS">Zat TSS</span>
+            </button>
+          </div>
+
+          <!-- Weight Slider -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <span id="sliderValLabel" data-lang-en="Weekly Wastewater Output" data-lang-id="Keluaran Air Limbah Mingguan">Keluaran Air Limbah Mingguan</span>
+              <span id="sliderValDisplay">1,000 m³</span>
+            </div>
+            <input type="range" min="100" max="10000" stroke-width="6" step="100" value="1000" class="calc-slider" id="impactSlider" oninput="calculateImpact(this.value)" />
+          </div>
+
+          <!-- Calculator Results Grid -->
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="result-icon">🏞</div>
+              <div class="result-info">
+                <div class="label" data-lang-en="Rivers Protected from Pollution" data-lang-id="Sungai Terlindungi">Rivers Protected from Pollution</div>
+                <div class="val" id="co2Offset">10,000 m³</div>
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-icon">🛡</div>
+              <div class="result-info">
+                <div class="label" data-lang-en="BBM KLHK Compliance Alignment" data-lang-id="Skor Baku Mutu Regulasi">BBM KLHK Compliance Alignment</div>
+                <div class="val" id="treesSaved">92% Compliance</div>
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-icon">🔄</div>
+              <div class="result-info">
+                <div class="label" data-lang-en="Production Recycled Water" data-lang-id="Air Daur Ulang Produksi">Production Recycled Water</div>
+                <div class="val" id="carMiles">400 m³</div>
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-icon">💰</div>
+              <div class="result-info">
+                <div class="label" data-lang-en="Operational Savings" data-lang-id="Penghematan Operasional">Operational Savings</div>
+                <div class="val" id="creditsEarned">Rp 12,000,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT / DEMO FORM ==================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card reveal-scale">
+        <div class="contact-orbs">
+          <div class="contact-orb"></div>
+          <div class="contact-orb"></div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </div>
+          <h2 data-lang-en="Optimize Factory Water Governance Now" data-lang-id="Optimalkan Tata Kelola Air Pabrik Sekarang">Optimize Factory Water Governance Now</h2>
+          <p data-lang-en="Request an internal factory pilot program. Seamlessly integrate smart water IoT monitors and support Circular Economy 5.0."
+            data-lang-id="Ajukan program uji coba internal pabrik Anda. Integrasikan sensor IoT air limbah pintar secara mulus & dukung Circular Economy 5.0.">
+            Request an internal factory pilot program. Seamlessly integrate smart water IoT monitors and support Circular Economy 5.0.</p>
+          
+          <form class="demo-form" onsubmit="event.preventDefault(); alert('Demo request submitted!');">
+            <input type="email" required placeholder="factory-admin@company.com" id="demoEmail" aria-label="Work Email" />
+            <button type="submit" class="demo-btn">
+              <span data-lang-en="Request Demo" data-lang-id="Ajukan Demo">Request Demo</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+          </form>
+          <p class="contact-info-label" data-lang-en="For partnerships, contact info@circula.id"
+            data-lang-id="Untuk kemitraan, hubungi info@circula.id">For partnerships, contact info@circula.id</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img class="footer-logo-icon" src="assets/logo.png" alt="Circula Logo" />
+            <span class="footer-logo-text">Circula</span>
+          </div>
+          <p data-lang-en="CIRCULA helps companies increase wastewater treatment efficiency, meet environmental regulatory compliance, and support transformations toward sustainable factories and the Circular Economy 5.0 ecosystem."
+            data-lang-id="CIRCULA membantu perusahaan meningkatkan efisiensi pengelolaan limbah, memenuhi kepatuhan regulasi lingkungan, serta mendukung transformasi menuju industri berkelanjutan dan ekosistem Circular Economy 5.0.">
+            CIRCULA helps companies increase wastewater treatment efficiency, meet environmental regulatory compliance, and support transformations toward sustainable factories and the Circular Economy 5.0 ecosystem.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-lang-en="Navigation" data-lang-id="Navigasi">Navigation</h4>
+          <a href="#about" data-lang-en="About" data-lang-id="Tentang">About</a>
+          <a href="#features" data-lang-en="Features" data-lang-id="Fitur">Features</a>
+          <a href="#simulator" data-lang-en="Simulator" data-lang-id="Simulator">Simulator</a>
+          <a href="#impact" data-lang-en="Impact" data-lang-id="Dampak">Impact</a>
+          <a href="#contact" data-lang-en="Request Demo" data-lang-id="Ajukan Demo">Request Demo</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-lang-en="Security & Standards" data-lang-id="Keamanan & Standar">Security & Standards</h4>
+          <a href="#" onclick="alert('Privacy policy standards compliant with ISO')" data-lang-en="Privacy Policy" data-lang-id="Kebijakan Privasi">Privacy Policy</a>
+          <a href="#" onclick="alert('ISO 14001 certification standards')" data-lang-en="ISO 14001 Standards" data-lang-id="Standar ISO 14001">ISO 14001 Standards</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Circula Platform. <span data-lang-en="All rights reserved." data-lang-id="Hak cipta dilindungi.">All rights reserved.</span></p>
+        <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" id="backToTopBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
